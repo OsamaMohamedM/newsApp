@@ -10,7 +10,7 @@ class SplashScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 3), () {
-      GoRouter.of(context).push(Approutes.homePage);
+      GoRouter.of(context).pushReplacement(Approutes.homePage);
     });
     return Scaffold(
       body: Column(
