@@ -4,6 +4,8 @@ import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:newsapp/Core/AppRoutes.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
+import '../../../../Core/widgets/DescripitonWidgets.dart';
+
 class SplashScreenBody extends StatelessWidget {
   const SplashScreenBody({super.key});
 
@@ -40,14 +42,7 @@ class SplashScreenBody extends StatelessWidget {
                 )
               ],
             ),
-            const Padding(
-              padding: const EdgeInsets.all(40.0),
-              child: Text(
-                'Introducing Flutter News 📰: Your go-to app for breaking news and in-depth analyses tailored to your interests! Stay informed effortlessly with personalized updates, bookmark articles, and engage with a vibrant community. 💡📱,',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 13),
-              ),
-            ),
+            const DescripitonWidgets(),
             LoadingAnimationWidget.waveDots(
               color: const Color(0XFFC714D7),
               size: 50,
