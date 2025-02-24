@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/Core/AppRoutes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,6 +10,12 @@ const MyApp({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context){
-    return Container();
+    return MaterialApp.router(
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      routerConfig: Approutes.router,
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
