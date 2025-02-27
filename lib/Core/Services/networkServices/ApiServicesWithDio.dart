@@ -1,4 +1,4 @@
-import 'package:newsapp/Core/network/ApiServices.dart';
+import 'package:newsapp/Core/Services/networkServices/ApiServices.dart';
 
 class ApiserviceswithdioImp extends ApiServices {
   ApiserviceswithdioImp(super.dio);
