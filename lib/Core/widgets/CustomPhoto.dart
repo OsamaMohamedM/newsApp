@@ -4,7 +4,10 @@ import 'package:newsapp/Core/widgets/CustomLoadingWidgets.dart';
 
 class CustomPhoto extends StatelessWidget {
   final String? imageUrl;
-  const CustomPhoto({this.imageUrl, super.key});
+  final double width, height;
+  final String defulte = "assets/images/defult.png";
+  const CustomPhoto(
+      {this.imageUrl, super.key, this.width = 100, this.height = 110});
 
   @override
   Widget build(BuildContext context) {
@@ -12,17 +15,17 @@ class CustomPhoto extends StatelessWidget {
       borderRadius: BorderRadius.circular(12),
       child: CachedNetworkImage(
         imageUrl: imageUrl ?? "",
-        width: 100,
-        height: 110,
+        width: width,
+        height: height,
         fit: BoxFit.cover,
         placeholder: (context, url) => Container(
-          width: 100,
-          height: 110,
-          color: Colors.grey[300], 
+          width: width,
+          height: width,
+          color: Colors.grey[300],
           child: const Center(child: CustomLoadingWidget()),
         ),
         errorWidget: (context, url, error) => Image.asset(
-          'assets/images/defult.png',
+          ((width == 180 && imageUrl != null) ? imageUrl! : defulte),
           width: 100,
           height: 110,
           fit: BoxFit.cover,

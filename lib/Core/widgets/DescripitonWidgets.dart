@@ -15,15 +15,16 @@ class DescripitonWidgets extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "FlutterNews",
+            "WorldNews",
             style: TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.w600,
                 color: isSplash ? Colors.black : Colors.white),
           ),
-           Text(
-            "Introducing Flutter News, the go-to platform for all your news needs! Whether you're into global affairs, tech innovations, sports highlights, entertainment buzz, or financial insights. We bring you the latest updates tailored to your interests. ",
-            style: TextStyle(fontSize: 14, color:isSplash ? Colors.black : Colors.white),
+          Text(
+            "Stay informed with the latest news from around the world! From breaking headlines and political updates to science discoveries, sports highlights, and entertainment trends, we bring you real-time coverage on everything that matters.",
+            style: TextStyle(
+                fontSize: 14, color: isSplash ? Colors.black : Colors.white),
           )
         ],
       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:newsapp/Fetures/Home/ViewModel/cubit/home_screen_cubit.dart';
+import 'package:newsapp/Core/cubit/NewsCubitCubit.dart';
 import '../../../../Core/widgets/ArticleItem.dart';
 import '../../../../Core/widgets/CustomLoadingWidgets.dart';
 import '../../../../Core/widgets/FailureWidget.dart';
@@ -26,17 +26,16 @@ class HomeScreenBody extends StatelessWidget {
               ),
             ),
           ),
-          BlocBuilder<HomeScreenCubit, HomeScreenCubitState>(
+          BlocBuilder<NewsCubit, NewsCubitState>(
             builder: (context, state) {
-              if (state is HomeScreenCubitSuccsses) {
+              if (state is NewsCubitSuccsses) {
                 return ArticleItems(articles: state.article);
-              } else if (state is HomeScreenCubitFaliure) {
+              } else if (state is NewCubitFaliure) {
                 return SliverToBoxAdapter(
                   child: FailureWidget(
                       message: state.message,
                       onRetry: () {
-                        BlocProvider.of<HomeScreenCubit>(context).getData('eg');
-                      
+                        BlocProvider.of<NewsCubit>(context).getData('eg');
                       }),
                 );
               } else {
