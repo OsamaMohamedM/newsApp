@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'ListViewItem.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:newsapp/Fetures/Home/ViewModel/cubit/home_screen_cubit.dart';
+import '../../../../Core/widgets/ArticleItem.dart';
+import '../../../../Core/widgets/CustomLoadingWidgets.dart';
+import '../../../../Core/widgets/FailureWidget.dart';
 import 'TopSection.dart';
 
 class HomeScreenBody extends StatelessWidget {
@@ -22,14 +26,20 @@ class HomeScreenBody extends StatelessWidget {
               ),
             ),
           ),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (context, index) => const Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [ListViewItem(), Divider()],
-              ),
-              childCount: 5,
-            ),
+          BlocBuilder<HomeScreenCubit, HomeScreenCubitState>(
+            builder: (context, state) {
+              if (state is HomeScreenCubitSuccsses) {
+                return ArticleItems(articles: state.article);
+              } else if (state is HomeScreenCubitFaliure) {
+                return FailureWidget(
+                    message: state.message,
+                    onRetry: () {
+                      BlocProvider.of<HomeScreenCubit>(context).getData('eg');
+                    });
+              } else {
+                return const CustomLoadingWidget();
+              }
+            },
           ),
         ],
       ),
