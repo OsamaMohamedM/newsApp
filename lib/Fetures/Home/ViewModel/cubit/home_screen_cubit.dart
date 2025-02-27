@@ -3,9 +3,9 @@ import 'package:newsapp/Core/data/Models/NewsModel/news_app_model/article.dart';
 import 'package:newsapp/Core/data/repositories/NewsRepo.dart';
 part 'home_screen_cubit_state.dart';
 
-class HomeScreenCubitCubit extends Cubit<HomeScreenCubitState> {
+class HomeScreenCubit extends Cubit<HomeScreenCubitState> {
   final Newsrepo _newsrepo;
-  HomeScreenCubitCubit(this._newsrepo) : super(HomeScreenCubitInitial());
+  HomeScreenCubit(this._newsrepo) : super(HomeScreenCubitInitial());
 
   void getData(String endPoint) async {
     emit(HomeScreenCubitLoading());

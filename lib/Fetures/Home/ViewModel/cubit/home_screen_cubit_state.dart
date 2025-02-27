@@ -1,4 +1,4 @@
-part of 'home_screen_cubit_cubit.dart';
+part of 'home_screen_cubit.dart';
 
 abstract class HomeScreenCubitState {}
 
