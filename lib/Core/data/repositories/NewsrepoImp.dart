@@ -14,17 +14,16 @@ class NewsrepoImp extends Newsrepo {
   @override
   Future<Either<Faliure, List<Article>>> fetchNews(String endPoint) async {
     try {
-      var response = apiServices.fetchData(endPoint);
-      NewsAppModel newsAppModel = NewsAppModel(
-          status: response['status'],
-          articles: response['articles'],
-          totalResults: response['totalResults']);
+      var response = await apiServices.fetchData(endPoint);
+      print("pp");
+      NewsAppModel newsAppModel = NewsAppModel.fromMap(response);
 
       return right(newsAppModel.articles ?? []);
     } on DioException catch (e) {
       return left(ServerFaliure.DioException(e));
     } catch (e) {
-      return left(FaliureException('Something went wrong. Please try again.!'));
+      return left(
+          FaliureException('Something went wrong. Please try again.! $e'));
     }
   }
 }

@@ -8,7 +8,7 @@ class Article {
   String? title;
   String? description;
   String? url;
-  dynamic urlToImage;
+  String? urlToImage;
   String? publishedAt;
   String? content;
 

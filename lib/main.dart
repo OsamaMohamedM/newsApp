@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => HomeScreenCubit(getIt.get<Newsrepo>())..getData('eg'),
+      create: (context) => HomeScreenCubit(getIt.get<Newsrepo>())..getData('us'),
       child: MaterialApp.router(
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.white,

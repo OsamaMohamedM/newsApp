@@ -11,9 +11,9 @@ class ArticleItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverList(
       delegate: SliverChildBuilderDelegate(
-        (context, index) => const Column(
+        (context, index) =>  Column(
           mainAxisSize: MainAxisSize.min,
-          children: [ListViewItem(), Divider()],
+          children: [ListViewItem(article : articles[index]),const Divider()],
         ),
         childCount: articles.length,
       ),

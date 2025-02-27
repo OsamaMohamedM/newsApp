@@ -1,51 +1,54 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/Core/data/Models/NewsModel/news_app_model/article.dart';
 
 import '../../../../Core/widgets/CustomPhoto.dart';
 import 'ReadMoreWithIcon.dart';
 
 class ListViewItem extends StatelessWidget {
+  final Article article;
   const ListViewItem({
-    super.key,
+    
+    super.key, required this.article,
   });
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
+    return  SizedBox(
       width: double.infinity,
       child: Padding(
-        padding: EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(12.0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomPhoto(),
-            SizedBox(width: 40),
+            CustomPhoto(imageUrl : article.urlToImage),
+            const SizedBox(width: 40),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Source Unknown',
-                    style: TextStyle(
+                    article.source!.name ?? 'unkown',
+                    style: const TextStyle(
                       color: Colors.black87,
                       fontWeight: FontWeight.w200,
                     ),
                   ),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   SizedBox(
                     width: 195,
                     child: Text(
-                      'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-                      maxLines: 2,
+                      article.description ?? 'unkown',
+                      maxLines: 4,
                       overflow: TextOverflow.ellipsis,
                       softWrap: true,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
-                  ReadMoreWithIcon(),
+                  const SizedBox(height: 10),
+                  const ReadMoreWithIcon(),
                 ],
               ),
             ),

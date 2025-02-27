@@ -31,13 +31,16 @@ class HomeScreenBody extends StatelessWidget {
               if (state is HomeScreenCubitSuccsses) {
                 return ArticleItems(articles: state.article);
               } else if (state is HomeScreenCubitFaliure) {
-                return FailureWidget(
-                    message: state.message,
-                    onRetry: () {
-                      BlocProvider.of<HomeScreenCubit>(context).getData('eg');
-                    });
+                return SliverToBoxAdapter(
+                  child: FailureWidget(
+                      message: state.message,
+                      onRetry: () {
+                        BlocProvider.of<HomeScreenCubit>(context).getData('eg');
+                      
+                      }),
+                );
               } else {
-                return const CustomLoadingWidget();
+                return const SliverToBoxAdapter(child: CustomLoadingWidget());
               }
             },
           ),

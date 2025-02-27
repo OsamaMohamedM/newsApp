@@ -15,7 +15,7 @@ class CustomLoadingWidget extends StatelessWidget {
         color: MyColors.myRed,
         secondRingColor: MyColors.myPurple,
         thirdRingColor: MyColors.myDeepPurpleAccent,
-        size: 5,
+        size: 50,
       ),
     );
   }
