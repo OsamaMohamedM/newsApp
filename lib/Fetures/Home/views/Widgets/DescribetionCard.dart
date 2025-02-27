@@ -13,7 +13,7 @@ class DescribetionCard extends StatelessWidget {
       width: double.infinity,
                
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(7),
           gradient: const LinearGradient(
             colors: [
               Color(0XFFFF2E00),
