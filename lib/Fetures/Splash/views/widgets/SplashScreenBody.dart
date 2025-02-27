@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
-import 'package:newsapp/Core/AppRoutes.dart';
+import 'package:newsapp/Core/navigation/AppRoutes.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 import '../../../../Core/widgets/DescripitonWidgets.dart';

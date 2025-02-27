@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
 
-import '../Fetures/Home/views/HomeScreen.dart';
-import '../Fetures/Splash/views/SplashScreen.dart';
+import '../../Fetures/Home/views/HomeScreen.dart';
+import '../../Fetures/Splash/views/SplashScreen.dart';
 
 abstract class Approutes {
   static const String homePage = '/home';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/Core/AppRoutes.dart';
+import 'package:newsapp/Core/navigation/AppRoutes.dart';
 
 void main() {
   runApp(const MyApp());
