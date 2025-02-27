@@ -9,27 +9,29 @@ class TopSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-         Text(
+        Text(
           'Discover',
           style: TextStyle(fontWeight: FontWeight.w600, fontSize: 35),
         ),
-         Text(
+        Text(
           'Read your favourite news articles in just one click',
           style: TextStyle(color: Colors.black45),
         ),
-         SizedBox(
+        SizedBox(
           height: 20,
         ),
-         DescribetionCard(),
-         SizedBox(
+        DescribetionCard(),
+        SizedBox(
           height: 20,
         ),
-        Text('Top head line in Egypt' , style: TextStyle(fontSize: 24 , fontWeight: FontWeight.w900 ),),
+        Text(
+          'Top head line in Egypt',
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.w900),
+        ),
       ],
     );
   }
 }
-

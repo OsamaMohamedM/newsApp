@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'widgets/SplashScreenBody.dart';
 
 class SplashScreen extends StatelessWidget {
-const SplashScreen({ super.key });
+  const SplashScreen({super.key});
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return const Scaffold(
-      body:  SplashScreenBody(),
+      body: SplashScreenBody(),
     );
   }
 }

@@ -11,7 +11,6 @@ class DescribetionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-               
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(7),
           gradient: const LinearGradient(
@@ -21,8 +20,7 @@ class DescribetionCard extends StatelessWidget {
               Color(0XFF3F0E70),
             ],
           )),
-          child: const DescripitonWidgets(isSplash:false),
+      child: const DescripitonWidgets(isSplash: false),
     );
   }
 }
-

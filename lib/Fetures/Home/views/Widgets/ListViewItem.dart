@@ -13,25 +13,25 @@ class ListViewItem extends StatelessWidget {
     return const SizedBox(
       width: double.infinity,
       child: Padding(
-        padding:  EdgeInsets.all(12.0),
+        padding: EdgeInsets.all(12.0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-             CustomPhoto(),
-             SizedBox(width: 40),
+            CustomPhoto(),
+            SizedBox(width: 40),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                   Text(
+                  Text(
                     'Source Unknown',
                     style: TextStyle(
                       color: Colors.black87,
                       fontWeight: FontWeight.w200,
                     ),
                   ),
-                   SizedBox(height: 4),
-                   SizedBox(
+                  SizedBox(height: 4),
+                  SizedBox(
                     width: 195,
                     child: Text(
                       'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
@@ -44,8 +44,7 @@ class ListViewItem extends StatelessWidget {
                       ),
                     ),
                   ),
-                   SizedBox(
-                      height: 10), 
+                  SizedBox(height: 10),
                   ReadMoreWithIcon(),
                 ],
               ),
@@ -56,4 +55,3 @@ class ListViewItem extends StatelessWidget {
     );
   }
 }
-

@@ -30,8 +30,11 @@ class ReadMoreWithIcon extends StatelessWidget {
             ),
           ),
           const Spacer(),
-          const Icon(Icons.favorite_border,
-              size: 20,color: Colors.black,), 
+          const Icon(
+            Icons.favorite_border,
+            size: 20,
+            color: Colors.black,
+          ),
         ],
       ),
     );

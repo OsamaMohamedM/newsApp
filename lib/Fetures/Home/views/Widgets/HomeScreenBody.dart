@@ -12,12 +12,12 @@ class HomeScreenBody extends StatelessWidget {
         slivers: [
           const SliverToBoxAdapter(
             child: Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 15.0, vertical: 20),
+              padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                   TopSection(),
-                   SizedBox(height: 20),
+                  TopSection(),
+                  SizedBox(height: 20),
                 ],
               ),
             ),
@@ -26,10 +26,7 @@ class HomeScreenBody extends StatelessWidget {
             delegate: SliverChildBuilderDelegate(
               (context, index) => const Column(
                 mainAxisSize: MainAxisSize.min,
-                children: [
-                  ListViewItem(),
-                  Divider()
-                ],
+                children: [ListViewItem(), Divider()],
               ),
               childCount: 5,
             ),

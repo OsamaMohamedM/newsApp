@@ -42,7 +42,7 @@ class SplashScreenBody extends StatelessWidget {
                 )
               ],
             ),
-            const DescripitonWidgets(isSplash : true),
+            const DescripitonWidgets(isSplash: true),
             LoadingAnimationWidget.waveDots(
               color: const Color(0XFFC714D7),
               size: 50,
