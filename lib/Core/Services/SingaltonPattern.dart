@@ -9,6 +9,7 @@ import '../data/repositories/NewsRepo.dart';
 GetIt getIt = GetIt.instance;
 void createObjects() {
   getIt.registerSingleton<Dio>(Dio());
-  getIt.registerSingleton<ApiServices>(ApiserviceswithdioImp(getIt.get<Dio>()));
+  getIt.registerSingleton<ApiServices>(
+      ApiserviceswithdioForUsImp(getIt.get<Dio>()));
   getIt.registerSingleton<Newsrepo>(NewsrepoImp(getIt.get<ApiServices>()));
 }

@@ -7,7 +7,7 @@ abstract class ApiServices {
   static const String _baseURL =
       "https://newsapi.org/v2/top-headlines?country=";
   static const String _apiKey = "a2be1b1ab15c46a1864cfa02de0846e3";
-  Future<Map<String, dynamic>> fetchDatawithUs(String endPoint);
+  Future<Map<String, dynamic>> fetchData(String endPoint);
   String get baseURL => _baseURL;
   String get apiKey => _apiKey;
 }

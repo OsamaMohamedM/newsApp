@@ -21,9 +21,9 @@ class DescripitonWidgets extends StatelessWidget {
                 fontWeight: FontWeight.w600,
                 color: isSplash ? Colors.black : Colors.white),
           ),
-          const Text(
+           Text(
             "Introducing Flutter News, the go-to platform for all your news needs! Whether you're into global affairs, tech innovations, sports highlights, entertainment buzz, or financial insights. We bring you the latest updates tailored to your interests. ",
-            style: TextStyle(fontSize: 14, color: Colors.white),
+            style: TextStyle(fontSize: 14, color:isSplash ? Colors.black : Colors.white),
           )
         ],
       ),
