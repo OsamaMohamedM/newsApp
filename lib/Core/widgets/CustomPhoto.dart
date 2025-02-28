@@ -25,7 +25,7 @@ class CustomPhoto extends StatelessWidget {
           child: const Center(child: CustomLoadingWidget()),
         ),
         errorWidget: (context, url, error) => Image.asset(
-          ((width == 120 && imageUrl != null) ? imageUrl! : defulte),
+          ((width == 180 && imageUrl != null) ? imageUrl! : defulte),
           width: width,
           height: height,
           fit: BoxFit.fill,

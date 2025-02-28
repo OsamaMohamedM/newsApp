@@ -15,7 +15,6 @@ class NewsrepoImp extends Newsrepo {
   Future<Either<Faliure, List<Article>>> fetchNews(String endPoint) async {
     try {
       var response = await apiServices.fetchData(endPoint);
-      print("pp");
       NewsAppModel newsAppModel = NewsAppModel.fromMap(response);
 
       return right(newsAppModel.articles ?? []);

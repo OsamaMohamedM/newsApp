@@ -1,6 +1,4 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:newsapp/Core/cubit/NewsCubitCubit.dart';
 import 'package:newsapp/Fetures/Categories/views/CategoriyDeatails.dart';
 
 import '../../Fetures/Categories/views/Categories.dart';

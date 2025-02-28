@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:newsapp/Core/cubit/NewsCubitCubit.dart';
 import 'package:newsapp/Core/navigation/AppRoutes.dart';
-import 'package:newsapp/Core/widgets/CustomPhoto.dart';
+import 'package:newsapp/Fetures/Categories/views/widgets/GridViewItem.dart';
 
 class Categories extends StatelessWidget {
   const Categories({super.key});
@@ -68,36 +66,3 @@ class Categories extends StatelessWidget {
   }
 }
 
-class GridViewItem extends StatelessWidget {
-  const GridViewItem({
-    super.key,
-    required this.image,
-    required this.category,
-  });
-
-  final String image;
-  final String category;
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        CustomPhoto(
-          width: 180,
-          height: 180,
-          imageUrl: image,
-        ),
-        Positioned(
-            bottom: 15,
-            left: 10,
-            child: Text(
-              category,
-              style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white),
-            ))
-      ],
-    );
-  }
-}
