@@ -51,11 +51,9 @@ The app uses [NewsAPI](https://newsapi.org/) to fetch news. Ensure you have an A
 const String apiKey = "your_api_key_here";
 ```
 
-## 📸 Screenshots
-(Add screenshots or GIFs of the application here)
 
-## 🤝 Contribution
-Feel free to contribute by submitting issues or creating pull requests.
+
+
 
 ## 📜 License
 This project is licensed under the **MIT License**.
