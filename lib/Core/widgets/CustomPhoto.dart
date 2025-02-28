@@ -7,7 +7,7 @@ class CustomPhoto extends StatelessWidget {
   final double width, height;
   final String defulte = "assets/images/defult.png";
   const CustomPhoto(
-      {this.imageUrl, super.key, this.width = 100, this.height = 110});
+      {this.imageUrl, super.key, this.width = 130, this.height = 150});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class CustomPhoto extends StatelessWidget {
         imageUrl: imageUrl ?? "",
         width: width,
         height: height,
-        fit: BoxFit.cover,
+        fit: BoxFit.fill,
         placeholder: (context, url) => Container(
           width: width,
           height: width,
@@ -25,10 +25,10 @@ class CustomPhoto extends StatelessWidget {
           child: const Center(child: CustomLoadingWidget()),
         ),
         errorWidget: (context, url, error) => Image.asset(
-          ((width == 180 && imageUrl != null) ? imageUrl! : defulte),
-          width: 100,
-          height: 110,
-          fit: BoxFit.cover,
+          ((width == 120 && imageUrl != null) ? imageUrl! : defulte),
+          width: width,
+          height: height,
+          fit: BoxFit.fill,
         ),
       ),
     );

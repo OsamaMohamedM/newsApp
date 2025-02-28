@@ -1,3 +1,4 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:newsapp/Core/cubit/NewsCubitCubit.dart';
 import 'package:newsapp/Fetures/Categories/views/CategoriyDeatails.dart';
@@ -15,10 +16,13 @@ abstract class Approutes {
     GoRoute(path: homePage, builder: (context, state) => const HomeScreen()),
     GoRoute(
         path: initialPage, builder: (context, state) => const SplashScreen()),
+    GoRoute(path: categories, builder: (context, state) => const Categories()),
     GoRoute(
-        path: categories, builder: (context, state) => const Categories()),
-    GoRoute(
-        path: categoriyDeatails, builder: (context, state) => CategoriyDeatails(category : (state.extra as String)),
-        ),
+      path: categoriyDeatails,
+      builder: (context, state) {
+        BlocProvider.of<NewsCubit>(context).getData(state.extra as String);
+        return CategoriyDeatails(category: (state.extra as String));
+      },
+    ),
   ]);
 }
