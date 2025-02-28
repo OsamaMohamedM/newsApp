@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => NewsCubit(getIt.get<Newsrepo>())..getData('us'),
+          create: (context) => NewsCubit(getIt.get<Newsrepo>())..getData('egypt'),
         ),
         BlocProvider(
           create: (context) => BottomNavigationBarCubit(),

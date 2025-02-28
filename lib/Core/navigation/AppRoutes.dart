@@ -20,7 +20,6 @@ abstract class Approutes {
     GoRoute(
       path: categoriyDeatails,
       builder: (context, state) {
-        BlocProvider.of<NewsCubit>(context).getData(state.extra as String);
         return CategoriyDeatails(category: (state.extra as String));
       },
     ),

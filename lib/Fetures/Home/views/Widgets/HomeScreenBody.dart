@@ -35,7 +35,7 @@ class HomeScreenBody extends StatelessWidget {
                   child: FailureWidget(
                       message: state.message,
                       onRetry: () {
-                        BlocProvider.of<NewsCubit>(context).getData('eg');
+                        BlocProvider.of<NewsCubit>(context).getData('eygpt');
                       }),
                 );
               } else {

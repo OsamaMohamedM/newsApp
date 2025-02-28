@@ -16,7 +16,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
           iconSize: 20,
           selectedItemColor: const Color(0XFF3F0E70),
           selectedFontSize: 0,
-          onTap: (index) => context.read<BottomNavigationBarCubit>().changePage(index),
+          onTap: (index) => context.read<BottomNavigationBarCubit>().changePage(index ,context),
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
             BottomNavigationBarItem(icon: Icon(Icons.menu), label: ''),
