@@ -1,16 +1,62 @@
-# newsapp
+# newApp
 
-A new Flutter project.
+## 📌 Description
+newApp is a Flutter-based mobile application that provides the latest news across various fields. It utilizes APIs to fetch real-time news and follows the MVVM architecture for a clean and maintainable code structure.
 
-## Getting Started
+## 🚀 Features
+- 📰 Fetches news from different categories using [NewsAPI](https://newsapi.org/)
+- 📦 Uses **Cubit** for state management
+- 🏗 Implements **MVVM** architecture
+- 🛤 Navigation powered by **GoRouter**
+- 🔗 Service locator pattern using **getIt** package
+- 📱 Supports both **Android & iOS**
 
-This project is a starting point for a Flutter application.
+## 🛠 Technologies Used
+- **Flutter** (Dart)
+- **State Management:** Cubit
+- **Navigation:** GoRouter
+- **Dependency Injection:** getIt
+- **API Integration:** NewsAPI
+- **Architecture:** MVVM
 
-A few resources to get you started if this is your first Flutter project:
+## ⚙️ Installation & Setup
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 🔹 Requirements
+- **Flutter SDK**: `3.24.3`
+- **Dart** (included with Flutter)
+- **Android Studio** / **VS Code** (for development)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 🔹 Steps
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/newApp.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd newApp
+   ```
+3. Install dependencies:
+   ```sh
+   flutter pub get
+   ```
+4. Run the application:
+   ```sh
+   flutter run
+   ```
+
+## 🔑 API Configuration
+The app uses [NewsAPI](https://newsapi.org/) to fetch news. Ensure you have an API key and update the code accordingly:
+
+```dart
+const String apiKey = "your_api_key_here";
+```
+
+## 📸 Screenshots
+(Add screenshots or GIFs of the application here)
+
+## 🤝 Contribution
+Feel free to contribute by submitting issues or creating pull requests.
+
+## 📜 License
+This project is licensed under the **MIT License**.
+

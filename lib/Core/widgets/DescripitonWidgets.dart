@@ -14,12 +14,12 @@ class DescripitonWidgets extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             "WorldNews",
             style: TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.w600,
-                color: isSplash ? Colors.black : Colors.white),
+                color:  Colors.white),
           ),
           Text(
             "Stay informed with the latest news from around the world! From breaking headlines and political updates to science discoveries, sports highlights, and entertainment trends, we bring you real-time coverage on everything that matters.",
